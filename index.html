@@ -5,30 +5,51 @@
 </head>
 <body>
 	<script type="text/javascript">
+		let compScore = 0;
+		let playerScore = 0;
+		let round = 0;
 		let choices = ['Rock', 'Paper', 'Scissors'];
+
 		let playerPlay = prompt("Rock, Paper, or Scissors");
 		playerPlay = playerPlay.toLowerCase();
+		playerSelection = playerPlay;
 
-		function compPlay() {
-			return choices[Math.floor(Math.random()*3)].toLowerCase()
+		let compPlay = function () {
+		return choices[Math.floor(Math.random()*3)].toLowerCase()
+		computerSelection = compPlay();
+		
+		function game() 
+		{
+			for (;round < 5; round++)
+			{
+				
+				
+				
+			}
 		}
-
+		
 		function playRound(playerSelection, computerSelection) 
 		{
-			// your code here!
-			
-			
-			
-			
-			if(playerSelection === computerSelection) {
+		// your code here!
+			if(playerSelection === computerSelection) 
+			{
 				return console.log("It's a Draw!")
 			}
-			else if ((playerSelection === 'rock' && computerSelection === "paper") || (playerSelection === 'paper' && computerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper')) {
+			else if ((playerSelection === 'rock' && computerSelection === "paper") || (playerSelection === 'paper' && computerSelection === 'scissors') || (computerSelection === 'scissors' && playerSelection === 'paper')) 
+			{
 				return console.log("You lose, " + computerSelection + " beats " + playerSelection)
+				compScore++;
 			}
-			else if ((playerSelection === 'paper' && computerSelection === "rock") || (playerSelection === 'scissors' && computerSelection === 'paper') || (computerSelection === 'rock' && playerSelection === 'scissors')) {
+			else if ((playerSelection === 'paper' && computerSelection === "rock") || (playerSelection === 'scissors' && computerSelection === 'paper') || (	computerSelection === 'rock' && playerSelection === 'scissors')) 
+			{
 				return console.log("You win, " + computerSelection + " beats " + playerSelection)
+				playerScore++;
 			}
+		}
+		
+
+
+		
 		} 
 	</script>
 
